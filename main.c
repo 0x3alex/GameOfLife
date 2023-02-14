@@ -70,7 +70,6 @@ void generate_table() {
 }
 
 int main(void) {
-    generate_table();
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         printf("error initializing SDL: %s\n", SDL_GetError());
     }
@@ -92,7 +91,8 @@ int main(void) {
                "SDL_Error: %s\n", SDL_GetError());
         return 1;
     }
-
+    generate_table();
+    SDL_Delay(RENDER_DELAY);
     while (true) {
         int alive=0;
 
