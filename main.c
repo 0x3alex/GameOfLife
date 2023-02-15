@@ -104,7 +104,7 @@ int main(void) {
                 break;
             }
         }
-        SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+        SDL_SetRenderDrawColor(renderer, 29, 32, 33, 0xFF);
         SDL_RenderClear(renderer);
         for(int r = 0; r < ROWS; ++r) {
             for(int c = 0; c < COLS; ++c) {
@@ -117,7 +117,7 @@ int main(void) {
                 }
             }
         }
-        SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
+        SDL_SetRenderDrawColor(renderer, 213, 109, 14, 0xFF);
         SDL_RenderFillRects(renderer, rects, alive);
         SDL_RenderPresent(renderer);
         update_table();
